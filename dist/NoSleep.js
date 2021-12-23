@@ -126,6 +126,8 @@ var NoSleep = function () {
   function NoSleep() {
     var _this = this;
 
+    var title = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "No Sleep";
+
     _classCallCheck(this, NoSleep);
 
     this.enabled = false;
@@ -144,7 +146,7 @@ var NoSleep = function () {
       // Set up no sleep video element
       this.noSleepVideo = document.createElement("video");
 
-      this.noSleepVideo.setAttribute("title", "No Sleep");
+      this.noSleepVideo.setAttribute("title", title);
       this.noSleepVideo.setAttribute("playsinline", "");
 
       this._addSourceToVideo(this.noSleepVideo, "webm", webm);
